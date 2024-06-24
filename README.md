@@ -2,7 +2,7 @@
 # Sistema de Reserva de Frango
 
 Um projeto que criei afim de auxiliar nas reservas de frango assado feitas em um comércio do meu bairro. O usuário realiza a reserva inserindo nome e telefone, marca a opção do tipo da reserva e realiza a compra.
-
+Fiz um vídeo demonstrando esse projeto e foi publicado no meu perfil do Linkedin https://www.linkedin.com/feed/update/urn:li:activity:7210992050823958528/
 
 ## Documentação da API
 
