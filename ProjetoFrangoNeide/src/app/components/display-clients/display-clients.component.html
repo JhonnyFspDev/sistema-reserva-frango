@@ -1,0 +1,48 @@
+<body>
+
+  <div class="logout">
+    <button type="button" class="btn btn-dark" (click)="deslogar()">Sair</button>
+  </div>
+
+  <div class="container">
+    <div class="search-container">
+      <form >
+        <span >
+        <img [src]="searchIcon">
+        </span>
+        <input type="search"  class="form-control rounded" placeholder="Busque um nome" (input)="search($event)">
+      </form>
+    </div>
+    <p class="qtde-clientes"> Quantidade de clientes: <strong>{{ quantidadeClientes }} </strong> </p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome Completo</th>
+          <th scope="col">Telefone</th>
+          <th scope="col">Reserva</th>
+          <th scope="col">Situação da Entrega</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let client of clients$ | async">
+          <th scope="row"> {{ client.id }} </th>
+          <td> {{ client.nome }} </td>
+          <td> {{ client.telefone }} </td>
+          <td> {{ client.statusCompra }} </td>
+          <td >
+            <span [ngClass]="{'entregue': client.pedidoEntregue, 'pendente': !client.pedidoEntregue}">
+              {{ client.pedidoEntregue ? "Entregue" : "Pendente" }}
+            </span>
+          </td>
+          <td class="td-button"><button type="button" class="btn btn-primary" (click)="navigationToEdit(client.id)" >Editar</button></td>
+          <td class="td-button"><button type="button" class="btn btn-danger" (click)="openDeleteModel(client)">Deletar</button></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+</body>
+
+

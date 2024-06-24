@@ -1,0 +1,59 @@
+.logout  {
+  position:absolute;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  right: 0px;
+  top: 0;
+}
+
+.container{
+  margin-top: 5rem;
+}
+
+.search-container{
+  margin-bottom: 1rem;
+  width: 100%;
+
+}
+
+.search-container form{
+  width: 100%;
+  position: relative;
+}
+
+.search-container span{
+  position: absolute;
+  top: .3rem;
+  right: 1rem;
+
+}
+
+.table button{
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem;
+}
+
+.td-button {
+  width: 4rem;
+}
+
+.custom-backdrop {
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo meio escuro */
+}
+
+.entregue {
+  padding: 0.1rem 0.28rem 0.2rem 0.28rem;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: rgb(55, 204, 55);
+  color: #fff;
+}
+
+.pendente {
+  padding: 0.1rem 0.28rem 0.2rem 0.28rem;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: rgb(245, 72, 72);
+  color: #fff;
+}

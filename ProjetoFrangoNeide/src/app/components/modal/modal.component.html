@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Deletar o Cliente?</h2>
+<mat-dialog-content>
+  Tem certeza que deseja deleter o cliente: {{ data.name }}
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="onNoClick()">Não</button>
+  <button mat-button mat-dialog-close cdkFocusInitial (click)="onYesClick()">Sim</button>
+</mat-dialog-actions>

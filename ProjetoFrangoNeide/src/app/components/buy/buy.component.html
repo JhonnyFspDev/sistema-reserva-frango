@@ -1,0 +1,83 @@
+
+<body>
+
+  <div class="alert hidden">
+    <div class="alert alert-success" role="alert">
+      Compra realizada com sucesso
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="form-image">
+
+      <img [src]="myimg" alt="">
+
+    </div>
+
+    <div class="form">
+
+      <form [formGroup]="form">
+
+        <div class="form-header">
+
+          <div class="logo">
+            <h1>Bem-Vindo ao Frango Assado da Neide</h1>
+          </div>
+
+          <div class="title">
+            <h3>Faça sua reserva</h3>
+          </div>
+
+        </div>
+
+        <div class="input-group">
+
+          <div class="input-box">
+
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" formControlName="nome"  >
+
+          </div>
+
+          <div class="input-box">
+
+            <label for="telefone">Celular</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" formControlName="telefone" mask="(00) 0 0000 0000"
+            prefix="+55 ">
+
+          </div>
+
+        </div>
+
+        <div class="reserve-inputs">
+
+          <div class="reserve-title">
+            <h6>Tipo de reserva</h6>
+          </div>
+
+          <div class="reserve-types">
+
+            <div class="reserve-input">
+              <input type="radio" id="metade" name="statusCompra" checked  value="PagamentoMetade" formControlName="statusCompra">
+              <label for="metade">Metade - R$25,00</label>
+            </div>
+
+            <div class="reserve-input">
+              <input type="radio" id="inteiro" name="statusCompra"  value="PagamentoCompleto" formControlName="statusCompra">
+              <label for="inteiro">Inteiro - R$50,00</label>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="generate-token">
+          <button type="submit" (click)="buttonClick()" [disabled]="!form.valid">Gerar QR Token</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</body>
